@@ -1,0 +1,14 @@
+// Media queries mobile
+@mixin mobile {
+  // ici on définit une mixin qui va contenir le code de la media query.
+  @media (max-width: 767.99px) {
+    @content; // On utilise la directive @content pour pouvoir insérer le code de la media query à l'endroit où on appelle la mixin.
+  }
+}
+
+// Media queries tablette
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}

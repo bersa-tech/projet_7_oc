@@ -1,0 +1,29 @@
+@import "../../styles/_Styles";
+@import "../../styles/_Responsives";
+
+.footer {
+  align-items: center;
+  background-color: $footer-color;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 50px;
+  width: 100%;
+  @include mobile {
+    height: 250px;
+    padding: 80px;
+  }
+  &__image {
+    height: 39px;
+    width: 122px;
+  }
+  &__info {
+    font-size: 24px;
+    @include mobile {
+      font-size: 12px;
+      line-height: 17px;
+      text-align: center;
+      width: 48%;
+    }
+  }
+}

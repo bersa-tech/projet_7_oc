@@ -1,0 +1,45 @@
+@import "../../styles/_Styles";
+@import "../../styles/_Responsives";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  width: 80%;
+  @include mobile {
+    width: 90%;
+  }
+  &__image {
+    align-items: center;
+    height: 68px;
+    width: 210px;
+    @include mobile {
+      height: 46px;
+      width: 145px;
+    }
+  }
+  &__navbar {
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    @include mobile {
+      align-items: right;
+      gap: 20px;
+    }
+    a {
+      color: $main-color;
+      font-size: 24px;
+      &:hover {
+        border-bottom: solid 2px $main-color;
+      }
+      @include mobile {
+        font-size: 12px;
+        line-height: 17px;
+        text-transform: uppercase;
+      }
+      &.active {
+        border-bottom: solid 2px $main-color;
+      }
+    }
+  }
+}
