@@ -13,9 +13,6 @@ function Error() {
     <main className="errorpage">
       <img src={Error404} alt="Erreur 404" />
       <p>Oups! La page que vous demandez n'existe pas.</p>
-      {
-        // Lien permettant de retourner sur la page Home
-      }
       <NavLink to="/">Retourner sur la page d’accueil</NavLink>
     </main>
   );

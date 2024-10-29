@@ -6,7 +6,7 @@ import Banner from "../../components/Banner/Banner";
 function About() {
   return (
     <main>
-      <Banner page="about" />
+      <Banner page="about" content="en cours" />
     </main>
   );
 }

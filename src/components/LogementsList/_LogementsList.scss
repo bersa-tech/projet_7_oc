@@ -1,2 +1,76 @@
 @import "../../styles/_Styles";
 @import "../../styles/_Responsives";
+
+.logements {
+  background-color: $second-color;
+  border-radius: 25px;
+  margin: 50px auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 80%;
+  @include mobile {
+    background-color: white;
+    margin: 20px auto;
+    width: 90%;
+  }
+  &__list {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    padding: 50px;
+    width: 100%;
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 25px;
+    }
+    &-item {
+      position: relative;
+
+      &-card {
+        border-radius: 10px;
+        color: $text-white;
+        display: block;
+        height: 340px;
+        width: 100%;
+        @include tablet {
+          height: 220px;
+        }
+        @include mobile {
+          height: 255px;
+        }
+        .logements-cover {
+          object-fit: cover;
+          width: 100%;
+          border-radius: 10px;
+          height: 340px;
+          @include tablet {
+            height: 220px;
+          }
+          @include mobile {
+            height: 255px;
+          }
+        }
+        .logements-title {
+          font-size: 18px;
+          position: absolute;
+          bottom: 15px;
+          left: 15px;
+          width: 90%;
+          @include tablet {
+            font-size: 14px;
+          }
+          @include mobile {
+            font-size: 18px;
+            line-height: 25px;
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}

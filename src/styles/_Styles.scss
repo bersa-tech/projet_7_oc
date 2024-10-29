@@ -28,9 +28,3 @@ body {
   color: $text_white;
   width: 100%;
 }
-
-.banner__image {
-  filter: brightness(0.7); // 70% de luminosité
-  object-fit: cover;
-  width: 100%;
-}
