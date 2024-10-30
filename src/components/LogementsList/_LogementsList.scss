@@ -28,6 +28,7 @@
       grid-template-columns: repeat(2, 1fr);
       padding: 25px;
     }
+
     &-item {
       position: relative;
 
@@ -37,6 +38,7 @@
         display: block;
         height: 340px;
         width: 100%;
+
         @include tablet {
           height: 220px;
         }

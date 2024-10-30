@@ -27,10 +27,10 @@
       gap: 20px;
     }
     a {
-      color: $main-color;
+      color: $black-color;
       font-size: 24px;
       &:hover {
-        border-bottom: solid 2px $main-color;
+        border-bottom: solid 2px $black-color;
       }
       @include mobile {
         font-size: 12px;
@@ -38,7 +38,7 @@
         text-transform: uppercase;
       }
       &.active {
-        border-bottom: solid 2px $main-color;
+        border-bottom: solid 2px $black-color;
       }
     }
   }
