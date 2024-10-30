@@ -1,2 +1,57 @@
 @import "../../styles/_Styles";
 @import "../../styles/_Responsives";
+
+.carrousel {
+  margin-bottom: 30px;
+  width: 100%;
+  @include mobile {
+    margin-bottom: 20px;
+  }
+  &__container {
+    align-items: center;
+    display: flex;
+    height: 415px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    @include mobile {
+      height: 255px;
+    }
+    &-arrowleft {
+      position: absolute;
+      left: 1%;
+      @include mobile {
+        height: 32px;
+        width: 24px;
+      }
+    }
+    &-arrowright {
+      position: absolute;
+      right: 1%;
+      @include mobile {
+        height: 32px;
+        width: 24px;
+      }
+    }
+    .arrow:hover {
+      cursor: pointer;
+    }
+    &-indicator {
+      font-size: 18px;
+      position: absolute;
+      bottom: 25px;
+      @include mobile {
+        display: none;
+      }
+    }
+    &-slide {
+      border-radius: 20px;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+    &-slidehidden {
+      display: none;
+    }
+  }
+}

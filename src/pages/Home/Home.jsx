@@ -3,7 +3,6 @@ import React from "react";
 // Importation des composants fonctions
 import Banner from "../../components/Banner/Banner";
 import LogementsList from "../../components/LogementsList/LogementsList";
-
 // Création d'une fonction composant pour afficher la page Home
 function Home() {
   // La fonction retourne dans le DOM une balise main qui contient la baniere

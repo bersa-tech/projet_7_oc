@@ -1,2 +1,79 @@
 @import "../../styles/_Styles";
 @import "../../styles/_Responsives";
+
+.logementscard {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 80%;
+  @include mobile {
+    margin: 20px auto;
+    width: 90%;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &-informations {
+      h2 {
+        color: $main-color;
+        font-size: 36px;
+        @include mobile {
+          font-size: 24px;
+          line-height: 25px;
+          margin-bottom: 5px;
+        }
+      }
+      p {
+        color: $black-color;
+        font-size: 18px;
+        @include mobile {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+    &-host {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      @include mobile {
+        align-items: flex-start;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      .host-id {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        p {
+          color: $main-color;
+          font-size: 18px;
+          width: 30%;
+          text-align: right;
+          @include mobile {
+            font-size: 12px;
+            line-height: 17px;
+            margin-right: -10px;
+          }
+        }
+        img {
+          margin-right: 20px;
+          border-radius: 33px;
+          height: 64px;
+          width: 64px;
+          @include mobile {
+            height: 32px;
+            width: 32px;
+          }
+        }
+      }
+    }
+  }
+}
