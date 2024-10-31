@@ -10,9 +10,10 @@
     margin: 20px auto;
     width: 90%;
   }
+
   &__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 70% 30%; /* Une colonne de 30% et une colonne de 70% */
     width: 100%;
     @include mobile {
       grid-template-columns: repeat(1, 1fr);
@@ -74,6 +75,18 @@
           }
         }
       }
+    }
+  }
+  &__collapse {
+    display: flex;
+    gap: 100px;
+    @include mobile {
+      flex-direction: column;
+      gap: 0;
+    }
+    @include tablet {
+      flex-direction: column;
+      gap: 0;
     }
   }
 }

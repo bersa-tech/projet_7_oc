@@ -1,2 +1,36 @@
 @import "../../styles/_Styles";
 @import "../../styles/_Responsives";
+
+.tags {
+  margin-top: 25px;
+  width: 100%;
+  @include mobile {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    width: 90%;
+  }
+  @include tablet {
+    margin-bottom: 10px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    @include mobile {
+      gap: 10px;
+    }
+    &-item {
+      align-items: center;
+      background-color: $main-color;
+      border-radius: 10px;
+      font-size: 14px;
+      padding: 5px 20px;
+      @include mobile {
+        font-size: 10px;
+        line-height: 14px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}

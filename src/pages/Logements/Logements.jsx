@@ -10,7 +10,7 @@ import Error from "../../pages/Error/Error";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Tag from "../../components/Tag/Tag";
 import Rating from "../../components/Rating/Rating";
-
+import Collapse from "../../components/Collapse/Collapse";
 // Design
 import "./_Logements.scss";
 
@@ -19,11 +19,10 @@ function Logements() {
   // Récupération de l'ID de la location avec le hook useParams de React Router
   const { id } = useParams();
   const locationPage = DataLogements.find((location) => location.id === id);
-  const { title, location, equipments, rating, host, description } =
-    locationPage;
+  const { title, location, equipments, host, description } = locationPage;
 
   // Si l'ID de la location est différent/inexistant, on affiche la page d'erreur
-  if (!location) {
+  if (!locationPage) {
     return <Error />;
   } // Sinon on affiche la page de la location avec l'ID correspondant
   else {
@@ -45,6 +44,19 @@ function Logements() {
             </div>
             <Rating />
           </div>
+        </section>
+        <section className="logementscard__collapse">
+          <Collapse title="Description" content={description} />
+          <Collapse
+            title="Équipements"
+            content={
+              <ul>
+                {equipments.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            }
+          />
         </section>
       </main>
     );

@@ -1,2 +1,15 @@
 @import "../../styles/_Styles";
 @import "../../styles/_Responsives";
+
+.rating {
+  align-items: flex-end;
+  display: flex;
+  gap: 2px;
+  margin-top: 10px;
+  @include mobile {
+    img {
+      height: 18px;
+      width: 18px;
+    }
+  }
+}
