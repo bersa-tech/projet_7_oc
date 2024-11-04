@@ -19,7 +19,6 @@ function Logements() {
   // Récupération de l'ID de la location avec le hook useParams de React Router
   const { id } = useParams();
   const locationPage = DataLogements.find((location) => location.id === id);
-  const { title, location, equipments, host, description } = locationPage;
 
   // Si l'ID de la location est différent/inexistant, on affiche la page d'erreur
   if (!locationPage) {
@@ -32,26 +31,29 @@ function Logements() {
         <section className="logementscard__container">
           <div className="logementscard__container-informations">
             <div>
-              <h2>{title}</h2>
-              <p>{location}</p>
+              <h2>{locationPage.title}</h2>
+              <p>{locationPage.location}</p>
             </div>
             <Tag />
           </div>
           <div className="logementscard__container-host">
             <div className="host-id">
-              <p>{host.name}</p>
-              <img src={host.picture} alt="Portrait du propriétaire" />
+              <p>{locationPage.host.name}</p>
+              <img
+                src={locationPage.host.picture}
+                alt="Portrait du propriétaire"
+              />
             </div>
             <Rating />
           </div>
         </section>
         <section className="logementscard__collapse">
-          <Collapse title="Description" content={description} />
+          <Collapse title="Description" content={locationPage.description} />
           <Collapse
             title="Équipements"
             content={
               <ul>
-                {equipments.map((item, index) => (
+                {locationPage.equipments.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
